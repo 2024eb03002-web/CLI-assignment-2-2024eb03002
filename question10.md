@@ -9,6 +9,9 @@ Write a C program demonstrating signal handling.
 
 • Parent handles each signal differently and exits gracefully
 
+Working principle:- Because the goal is to show how a process handles signals sent by other processes, i utilised commmands like fork() (to create a separate child process and to avoid mixed signal logics), sleep() (to make order of signal order predictable) and pause() (to keep parent alive indefinetly). when child 1 sleeps. it sends SIGTERM, when the parent receives this, handler should execute. 
+
+main.sh file
 
 i first created a signals.c file using nano command.  
 
